@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students | SSMS</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="navbar"></div>
+  <div class="container">
+    <div id="flash-container"></div>
+    <h1 class="page-title">Students</h1>
+
+    <div class="card">
+      <h2>Add Student</h2>
+      <form id="add-form">
+        <div class="form-grid">
+          <div><label>Student ID</label><input type="text" name="student_id" placeholder="e.g. 242-15-065" required></div>
+          <div><label>Name</label><input type="text" name="student_name" required></div>
+          <div><label>Email</label><input type="email" name="email" placeholder="e.g. shuvo242-15-065@diu.edu.bd" required></div>
+          <div><label>Academic Year</label><input type="number" name="academic_year" min="1" max="5"></div>
+          <div>
+            <label>Clearance Status</label>
+            <select name="clearance_status">
+              <option value="Pending">Pending</option>
+              <option value="Cleared">Cleared</option>
+            </select>
+          </div>
+          <div><label>Section</label><select name="section_id" id="add-section"></select></div>
+        </div>
+        <button type="submit" class="btn">Add Student</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>All Students</h2>
+      <div id="table-wrap"></div>
+    </div>
+  </div>
+
+  <script src="/js/common.js"></script>
+  <script src="/js/admin-students.js"></script>
+</body>
+</html>
